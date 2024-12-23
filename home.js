@@ -22,3 +22,28 @@ navClose.addEventListener("click", () => {
     navClose.setAttribute("data-visible", false);
   }
 });
+
+const shoppingBag = document.getElementById("cart-box");
+const CartItem = document.getElementById("cart-icon");
+const crossBtn = document.getElementById("cross-btn");
+
+
+shoppingBag.addEventListener('click',() => {
+  const showCart = CartItem.getAttribute('data-visible');
+
+  if(showCart === 'false'){
+    CartItem.setAttribute('data-visible',true);
+  }else{
+    CartItem.setAttribute('data-visible',false);
+  }
+
+})
+
+
+crossBtn.addEventListener('click',() => {
+  const showCart = CartItem.getAttribute('data-visible');
+
+  if(showCart === 'true'){
+    CartItem.setAttribute('data-visible',false);
+  }
+})
